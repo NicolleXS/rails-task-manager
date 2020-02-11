@@ -1,0 +1,12 @@
+<div class="container">
+  <h2><%= @task.title %></h2>
+  <h3><%= @task.details %></h3>
+    <% if @task.completed == true %>
+      <p><%= "This task is completed" %></p>
+    <% else %>
+      <p><%= "This task is not completed yet!" %></p>
+    <% end %>
+  <div> <%= link_to 'Back to tasks', tasks_path %> </div>
+  <div> <%= link_to 'Update task', edit_task_path(@task) %> </div>
+
+</div>
